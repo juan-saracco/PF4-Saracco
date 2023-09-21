@@ -3,9 +3,12 @@ package com.proyecto.demo.entidades;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "invoice_details")
 public class invoiceDetails {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     @OneToOne
     @Column(name = "invoice_id")
