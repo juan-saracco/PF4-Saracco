@@ -34,7 +34,6 @@ public class ClientService {
 
     public void deleteClientById(Integer id) throws Exception {
         Client client = getClientById(id);
-
         clientRepository.delete(client);
     }
 }

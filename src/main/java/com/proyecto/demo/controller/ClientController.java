@@ -16,23 +16,26 @@ public class ClientController {
     private ClientService clientService;
 
     @GetMapping("/client")
-    private ResponseEntity<List<Client>> getClients(){
+    public ResponseEntity<List<Client>> getClients(){
         List<Client> clients = clientService.getClients();
-
         return ResponseEntity.ok(clients);
     }
 
+    @GetMapping("/client/{id}")
+    public ResponseEntity<Client> getClientById(@PathVariable Integer id) throws Exception {
+        Client client = clientService.getClientById(id);
+        return ResponseEntity.ok(client);
+    }
+
     @PostMapping("/client")
-    private ResponseEntity<Client> postClient(@RequestBody Client client){
+    public ResponseEntity<Client> postClient(@RequestBody Client client){
         clientService.createClient(client);
         return ResponseEntity.ok(client);
     }
 
     @PostMapping("client/{id}")
-    private void deleteClient(@PathVariable Integer id) throws Exception {
+    public void deleteClient(@PathVariable Integer id) throws Exception {
         clientService.deleteClientById(id);
-
     }
-
 
 }
