@@ -1,4 +1,4 @@
-package com.proyecto.demo.entidades;
+package com.proyecto.demo.entity;
 
 import jakarta.persistence.*;
 
@@ -14,7 +14,7 @@ public class Client {
     private String name;
 
     @Column(name = "last_name")
-    private String lastname;
+    private String lastName;
 
     @Column(name = "doc_number")
     private String docNumber;
@@ -22,10 +22,10 @@ public class Client {
     public Client(){
     }
 
-    public Client(Integer id, String name, String lastname, String docNumber) {
+    public Client(Integer id, String name, String lastName, String docNumber) {
         this.id = id;
         this.name = name;
-        this.lastname = lastname;
+        this.lastName = lastName;
         this.docNumber = docNumber;
     }
 
@@ -45,12 +45,12 @@ public class Client {
         this.name = name;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getDocNumber() {

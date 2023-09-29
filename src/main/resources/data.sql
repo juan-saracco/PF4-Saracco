@@ -1,6 +1,5 @@
 -- Insertar datos en la tabla `client`
-INSERT INTO proyecto_coder.client (name, last_name, doc_number)
-VALUES
+INSERT INTO proyecto_coder.client (name, last_name, doc_number) VALUES
     ('Juan', 'Pérez', '1234567890'),
     ('María', 'López', '0987654321'),
     ('Carlos', 'González', '5678901234');

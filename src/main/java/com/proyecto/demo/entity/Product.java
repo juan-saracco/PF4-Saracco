@@ -1,4 +1,4 @@
-package com.proyecto.demo.entidades;
+package com.proyecto.demo.entity;
 
 import jakarta.persistence.*;
 
@@ -18,9 +18,7 @@ public class Product {
 
     private Double price;
 
-    public Product(Integer id) {
-        this.id = id;
-    }
+    public Product() {}
 
     public Product(Integer id, String description, String code, Integer stock, Double price) {
         this.id = id;

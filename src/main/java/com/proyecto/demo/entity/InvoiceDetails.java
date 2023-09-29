@@ -1,29 +1,27 @@
-package com.proyecto.demo.entidades;
+package com.proyecto.demo.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "invoice_details")
-public class invoiceDetails {
+@Table(name = "invoice_detail")
+public class InvoiceDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer id;
     @OneToOne
-    @Column(name = "invoice_id")
     private Invoice invoice;
 
     private Integer amount;
     @ManyToOne
-    @Column(name = "product_id")
     private Product product;
     private Double price;
 
-    public invoiceDetails( ) {
+    public InvoiceDetails( ) {
     }
 
-    public invoiceDetails(Integer id, Invoice invoice, Integer amount, Product product, Double price) {
+    public InvoiceDetails(Integer id, Invoice invoice, Integer amount, Product product, Double price) {
         this.id = id;
         this.invoice = invoice;
         this.amount = amount;

@@ -1,4 +1,4 @@
-package com.proyecto.demo.entidades;
+package com.proyecto.demo.entity;
 
 import jakarta.persistence.*;
 
@@ -12,7 +12,6 @@ public class Invoice {
     private Integer id;
 
     @ManyToOne
-    @Column(name = "client_id")
     private Client client;
 
     @Column(name = "created_at")
