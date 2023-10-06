@@ -2,6 +2,8 @@ package com.proyecto.demo.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product")
 public class Product {
@@ -9,15 +11,16 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private  String description;
+    private String description;
 
-    private  String code;
+    private String code;
 
     private Integer stock;
 
     private Double price;
 
-    public Product() {}
+    public Product() {
+    }
 
     public Product(Integer id, String description, String code, Integer stock, Double price) {
         this.id = id;
@@ -66,4 +69,5 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
+
 }
